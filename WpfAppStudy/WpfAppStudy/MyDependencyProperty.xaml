@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <TextBlock>我是自定义依赖属性</TextBlock>
     </Grid>
 </UserControl>

@@ -29,5 +29,39 @@ namespace WpfAppStudy
         public static readonly DependencyProperty MyColorProperty;
 
         // 2、在属性系统中进行注册
+        static MyDependencyProperty()
+        {
+            MyColorProperty = DependencyProperty.Register("MyColor", typeof(string), typeof(MyDependencyProperty),
+                new PropertyMetadata("Red", (s, e) =>
+                {
+                    var mdp = s as MyDependencyProperty;
+                    if (mdp != null)
+                    {
+                        try
+                        {
+                            var color = (Color)ColorConverter.ConvertFromString(e.NewValue.ToString());
+                            mdp.Foreground = new SolidColorBrush(color);
+                        }
+                        catch
+                        {
+                            mdp.Foreground = new SolidColorBrush(Colors.Black);
+                        }
+                    }
+                }));
+        }
+
+        // 3、使用.NET 属性包装依赖属性：属性名称与注册时候的名称必须一致，
+        // 即属性名为MyColor对应注册时的MyColor
+        public string MyColor
+        {
+            get
+            {
+                return (string)GetValue(MyColorProperty);
+            }
+            set
+            {
+                SetValue(MyColorProperty, value);
+            }
+        }
     }
 }

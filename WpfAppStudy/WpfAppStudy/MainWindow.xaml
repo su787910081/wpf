@@ -20,6 +20,10 @@
         <Button Grid.Row="0" Grid.Column="0" Width="100" Height="40" Click="ButtonGridDemo_Click">GridDemo</Button>
         <Button Grid.Row="0" Grid.Column="1" Width="100" Height="40" Click="ButtonGridDemoSplitter_Click">分割线</Button>
         <Button Grid.Row="1" Grid.Column="0" Width="100" Height="40" Click="ButtonDependNormal_Click">普通依赖</Button>
-        <Button Grid.Row="1" Grid.Column="1" Width="100" Height="40" Click="ButtonDependUserDefine_Click">自定义依赖</Button>
+        <!--<Button Grid.Row="1" Grid.Column="1" Width="100" Height="40" Click="ButtonDependUserDefine_Click">自定义依赖</Button>-->
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBox Name="tbColor"></TextBox>
+            <local:MyDependencyProperty MyColor="{Binding Path=Text,ElementName=tbColor}"></local:MyDependencyProperty>
+        </StackPanel>
     </Grid>
 </Window>
