@@ -1,0 +1,54 @@
+﻿<Window x:Class="WpfAppStudy.DemoGrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppStudy"
+        mc:Ignorable="d"
+        Title="DemoGrid" Height="450" Width="800">
+    <!-- 显示网格线  -->
+    <Grid ShowGridLines="True">
+        <!-- 定义网格的行: 2 行 -->
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- 定义网格的列: 4列 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <!--让这个Button 跨越两行两列，占用4 个网格-->
+        <Button Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2">Top Left</Button>
+        <Button Grid.Row="1" Grid.Column="3" Width="100" Height="50">Button right</Button>
+        <Button Grid.Row="1" Grid.Column="2" Width="120" Height="30" FontSize="14">Bottom middle</Button>
+        <Button Grid.Row="0" Grid.Column="3" Width="120" Height="35" FontSize="14">分割线</Button>
+        <Grid Grid.Row="0" Grid.Column="2" ShowGridLines="True">
+            <!--定义行：3 行-->
+            <Grid.RowDefinitions>
+                <!-- 自动行高 -->
+                <RowDefinition Height="Auto"></RowDefinition>
+                <!-- 按比例行高 -->
+                <RowDefinition Height="*"></RowDefinition>
+                <!--固定行高-->
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--定义列：2 列-->
+            <Grid.ColumnDefinitions>
+                <!--按比例列宽-->
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <!--固定列宽-->
+                <ColumnDefinition Width="200"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--定义元素，并指定单元格-->
+            <TextBlock Grid.Row="0" Grid.Column="0" >第一行第一列</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="0" >第二行第一列</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" >第三行第一列</TextBlock>
+            <Button Grid.Row="0" Grid.Column="1">第一行第二列</Button>
+            <Button Grid.Row="1" Grid.Column="1">第二行第二列</Button>
+            <Button Grid.Row="2" Grid.Column="1">第三行第二列</Button>
+        </Grid>
+    </Grid>
+</Window>

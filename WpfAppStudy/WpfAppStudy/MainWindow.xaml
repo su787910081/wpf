@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfAppStudy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppStudy"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid ShowGridLines="False">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Width="100" Height="40" Click="ButtonGridDemo_Click">GridDemo</Button>
+        <Button Grid.Row="0" Grid.Column="1" Width="100" Height="40" Click="ButtonGridDemoSplitter_Click">分割线</Button>
+        <Button Grid.Row="1" Grid.Column="0" Width="100" Height="40" Click="ButtonDependNormal_Click">普通依赖</Button>
+        <Button Grid.Row="1" Grid.Column="1" Width="100" Height="40" Click="ButtonDependUserDefine_Click">自定义依赖</Button>
+    </Grid>
+</Window>
