@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfAppStudy.WorkWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppStudy"
+        mc:Ignorable="d"
+        Title="WorkWindow" Height="450" Width="800">
+    
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- 左边第一列和两行整体为一个单元，消息协议请求 -->
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+            <Button DockPanel.Dock="Top" Width="100" Height="35" Margin="10">协议请求</Button>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                <TreeView DockPanel.Dock="Top" Margin="3" MinWidth="150" MaxWidth="200" MinHeight="300">
+                    <TreeViewItem Header="接口" IsExpanded="True">
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单下单下单下单下单下单下单下单下单下单下单下单下单下单下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                        <TreeViewItem Header="下单"></TreeViewItem>
+                    </TreeViewItem>
+                </TreeView>
+            </ScrollViewer>
+        </DockPanel>
+
+        <!-- 第0 行第1 列 -->
+        <DockPanel Grid.Row="0" Grid.Column="1">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <Label>余额</Label>
+                <Label>姓名</Label>
+            </StackPanel>
+            <Border>
+                <Label Margin="10">预留</Label>
+            </Border>
+        </DockPanel>
+        
+        
+    </Grid>
+</Window>

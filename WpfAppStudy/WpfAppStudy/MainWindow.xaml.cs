@@ -48,5 +48,11 @@ namespace WpfAppStudy
             DemoDependUserDefine dd = new DemoDependUserDefine();
             dd.Show();
         }
+
+        private void ButtonWorkWindow_Click(object sender, RoutedEventArgs e)
+        {
+            WorkWindow ww = new WorkWindow();
+            ww.Show();
+        }
     }
 }
