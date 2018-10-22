@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SslServerDemo", "SslServerDemo\SslServerDemo.csproj", "{B09C9281-31E7-4FB2-9E25-AF11F2D2D4F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SslClientDemo", "SslClientDemo\SslClientDemo.csproj", "{3592E04E-1804-4FD1-A2CD-B896A9CCDA94}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B09C9281-31E7-4FB2-9E25-AF11F2D2D4F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09C9281-31E7-4FB2-9E25-AF11F2D2D4F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09C9281-31E7-4FB2-9E25-AF11F2D2D4F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09C9281-31E7-4FB2-9E25-AF11F2D2D4F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3592E04E-1804-4FD1-A2CD-B896A9CCDA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3592E04E-1804-4FD1-A2CD-B896A9CCDA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3592E04E-1804-4FD1-A2CD-B896A9CCDA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3592E04E-1804-4FD1-A2CD-B896A9CCDA94}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AFF45EB-048E-41B0-9E8B-F7E6F7BC9FDE}
+	EndGlobalSection
+EndGlobal
