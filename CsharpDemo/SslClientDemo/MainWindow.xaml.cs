@@ -50,6 +50,13 @@ namespace SslClientDemo
                 //验证证书
                 try
                 {
+/*
+注意事项
+
+  1.服务端验证方法AuthenticateAsServer的参数clientCertificateRequired如果为true,那在客户端也要安装server.pfx.
+
+  2.客户端验证方法AuthenticateAsClient的参数targetHost对应证书中Common Name,也就是受颁发者.
+*/
                     _sslStream.AuthenticateAsClient("test", certs, SslProtocols.Tls, false);
                 }
                 catch (AuthenticationException )
